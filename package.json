@@ -8,7 +8,8 @@
   ],
   "exports": {
     ".": "./dist/index.js",
-    "./next12/server": "./dist/next12/server/index.js"
+    "./next12/server": "./dist/next12/server/index.js",
+    "./next12/client": "./dist/next12/client/index.js"
   },
   "scripts": {
     "clean": "rimraf dist",
