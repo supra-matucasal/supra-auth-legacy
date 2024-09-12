@@ -20,19 +20,8 @@ function handleLogoutNextApi(req, res) {
             const cookies = (0, cookie_1.parse)(req.headers.cookie || '');
             let session = cookies[`${authConfig_1.SESSION_NAME}`];
             console.log('While logging out, session, client_id, redirect_logout_url, cookies:', { session, client_id, redirect_logout_url, cookies });
-            if (client_id === undefined || redirect_logout_url === undefined) {
+            if (!session || client_id === undefined || redirect_logout_url === undefined) {
                 return res.status(400).json({ error: 'Invalid route' });
-            }
-            //You are already logger out
-            if (!session) {
-                return res.status(200).send(`
-        <script>
-          window.location.reload();
-          setTimeout(function() {
-            window.location.href = "${redirect_logout_url}";
-          }, 100);
-        </script>
-      `);
             }
             session = JSON.parse(session);
             const agent = req.headers['user-agent'] || 'Unknown';
