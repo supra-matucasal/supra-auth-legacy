@@ -19,6 +19,7 @@ function handleLogoutNextApi(req, res) {
             const redirect_logout_url = authConfig_1.SUPRA_AUTH_CLIENT_BASE_URL;
             const cookies = (0, cookie_1.parse)(req.headers.cookie || '');
             let session = cookies[`${authConfig_1.SESSION_NAME}`];
+            console.log('While logging out, session, client_id, redirect_logout_url, cookies:', { session, client_id, redirect_logout_url, cookies });
             if (!session || client_id === undefined || redirect_logout_url === undefined) {
                 return res.status(400).json({ error: 'Invalid route' });
             }
