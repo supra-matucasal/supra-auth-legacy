@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleMeNextApi = void 0;
 const cookie_1 = require("cookie");
 const uuid_1 = require("uuid");
-const authConfig_1 = require("../../authConfig");
+const authConfig_1 = require("../../../authConfig");
 const getHeaders = (bearerToken, agent, ip) => ({
     'Referer': authConfig_1.SUPRA_AUTH_CLIENT_BASE_URL,
     'Authorization': `Bearer ${bearerToken}`,

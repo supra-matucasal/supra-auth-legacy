@@ -1,4 +1,4 @@
-import { SUPRA_AUTH_CLIENT_BASE_URL, REDIRECT_URI, SESSION_COOKIE_MAX_AGE, SESSION_NAME, SUPRA_AUTH_CLIENT_ID, SUPRA_AUTH_ISSUER_BASE_URL } from '../../authConfig';
+import { SUPRA_AUTH_CLIENT_BASE_URL, REDIRECT_URI, SESSION_COOKIE_MAX_AGE, SESSION_NAME, SUPRA_AUTH_CLIENT_ID, SUPRA_AUTH_ISSUER_BASE_URL } from '../../../authConfig';
 import { NextApiRequest, NextApiResponse } from "next";
 import cookie from 'cookie';
 import { v4 as uuidv4 } from 'uuid';

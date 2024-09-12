@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleRemoveCookieNextApi = void 0;
 const cookie_1 = require("cookie");
-const authConfig_1 = require("../../authConfig");
+const authConfig_1 = require("../../../authConfig");
 function handleRemoveCookieNextApi(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const cookies = (0, cookie_1.parse)(req.headers.cookie || '');

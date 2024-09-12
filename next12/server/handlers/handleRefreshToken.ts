@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { REFRESH_TOKEN_URL, SESSION_COOKIE_MAX_AGE, SESSION_NAME, SUPRA_AUTH_CLIENT_BASE_URL } from '../../authConfig';
+import { REFRESH_TOKEN_URL, SESSION_COOKIE_MAX_AGE, SESSION_NAME, SUPRA_AUTH_CLIENT_BASE_URL } from '../../../authConfig';
 
 const getHeaders: any = (req: any, bearerToken: any, agent: any, ip: any) => ({
   'Referer': SUPRA_AUTH_CLIENT_BASE_URL,

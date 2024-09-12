@@ -9,19 +9,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handleSessionNextApi = void 0;
-const authConfig_1 = require("../../authConfig");
-function handleSessionNextApi(req, res) {
+exports.handleGetToken = void 0;
+const authConfig_1 = require("../../../authConfig");
+const cookie_1 = require("cookie");
+function handleGetToken(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
-        const cookieValue = req.cookies[authConfig_1.SESSION_NAME || 'session'];
-        if (cookieValue === '' || cookieValue === undefined) {
-            // If cookieValue is an empty object, return undefined
-            return undefined;
+        const cookies = (0, cookie_1.parse)(req.headers.cookie || '');
+        let session = cookies[`${authConfig_1.SESSION_NAME}`];
+        session = JSON.parse(session);
+        try {
+            return res.status(200).json(session);
         }
-        //let isTokenRefreshing: any = false; // Track token refresh status
-        const { access_token, email, refresh_token } = JSON.parse(cookieValue || '');
-        //return { access_token, email, refresh_token };
-        return res.status(200).json({ session: { access_token, email, refresh_token } });
+        catch (error) {
+            console.error("Failed to fetch token:", error);
+            return res.status(400).json({ error: "Failed to fetch token" });
+        }
     });
 }
-exports.handleSessionNextApi = handleSessionNextApi;
+exports.handleGetToken = handleGetToken;

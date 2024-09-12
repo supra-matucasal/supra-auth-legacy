@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleRefreshTokenNextApi = void 0;
-const authConfig_1 = require("../../authConfig");
+const authConfig_1 = require("../../../authConfig");
 const getHeaders = (req, bearerToken, agent, ip) => ({
     'Referer': authConfig_1.SUPRA_AUTH_CLIENT_BASE_URL,
     'Authorization': `Bearer ${bearerToken}`,

@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import cookie from 'cookie';
-import { REDIRECT_URI, SESSION_COOKIE_MAX_AGE, SESSION_NAME, SUPRA_AUTH_CLIENT_BASE_URL, SUPRA_AUTH_CLIENT_ID, SUPRA_AUTH_CLIENT_SECRET, TOKEN_FETCH_URL } from '../../authConfig';
+import { REDIRECT_URI, SESSION_COOKIE_MAX_AGE, SESSION_NAME, SUPRA_AUTH_CLIENT_BASE_URL, SUPRA_AUTH_CLIENT_ID, SUPRA_AUTH_CLIENT_SECRET, TOKEN_FETCH_URL } from '../../../authConfig';
 
 
 export async function handleTokenNextApi(req: NextApiRequest, res: NextApiResponse) {

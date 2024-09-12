@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { SUPRA_AUTH_CLIENT_BASE_URL, REDIRECT_URI, SESSION_NAME, SUPRA_AUTH_CLIENT_ID, SUPRA_AUTH_CLIENT_SECRET, TOKEN_FETCH_URL } from '../../authConfig';
+import { SUPRA_AUTH_CLIENT_BASE_URL, REDIRECT_URI, SESSION_NAME, SUPRA_AUTH_CLIENT_ID, SUPRA_AUTH_CLIENT_SECRET, TOKEN_FETCH_URL } from '../../../authConfig';
 import { NextApiRequest, NextApiResponse } from "next";
 import cookie from 'cookie';
 

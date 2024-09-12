@@ -1,6 +1,6 @@
 import { parse } from 'cookie';
 import { NextApiRequest, NextApiResponse } from "next";
-import { LOGOUT_URL, SESSION_NAME, SUPRA_AUTH_CLIENT_BASE_URL, SUPRA_AUTH_CLIENT_ID } from '../../authConfig';
+import { LOGOUT_URL, SESSION_NAME, SUPRA_AUTH_CLIENT_BASE_URL, SUPRA_AUTH_CLIENT_ID } from '../../../authConfig';
 
 
 

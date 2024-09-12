@@ -1,7 +1,7 @@
 import { parse } from 'cookie';
 import { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from 'uuid';
-import { ME_URL, SESSION_NAME, SUPRA_AUTH_CLIENT_BASE_URL } from '../../authConfig';
+import { ME_URL, SESSION_NAME, SUPRA_AUTH_CLIENT_BASE_URL } from '../../../authConfig';
 const getHeaders: any = (bearerToken: any, agent: any, ip: any) => ({
   'Referer': SUPRA_AUTH_CLIENT_BASE_URL,
   'Authorization': `Bearer ${bearerToken}`,
