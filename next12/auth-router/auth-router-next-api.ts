@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-//import { getSession } from '../auth-utils-server';
-import { handleCallbackNextApi, handleLoginNextApi, handleTokenNextApi } from '../handlers';
+import { handleCallbackNextApi, handleLoginNextApi, handleTokenNextApi, handleLogoutNextApi, handleMeNextApi, handleSessionNextApi, handleRemoveCookieNextApi, handleRefreshTokenNextApi } from '../handlers';
 
 
 export function createAuthRouterNextApi() {
@@ -14,13 +13,23 @@ export function createAuthRouterNextApi() {
             return handleLoginNextApi(req, res);
           case 'callback':
             return handleCallbackNextApi(req, res);
+          case 'logout':
+            return handleLogoutNextApi(req, res);
           case 'token':
             return handleTokenNextApi(req, res);
+          case 'me':
+            return handleMeNextApi(req, res);
+          case 'session':
+            return handleSessionNextApi(req, res);
+          case 'remove-token':
+            return handleRemoveCookieNextApi(req, res);
           default:
             return res.status(400).json({ error: 'Invalid route' });
         }
       case 'POST':
         switch (route) {
+          case 'refresh-token':
+            return handleRefreshTokenNextApi(req, res);
           default:
             return res.status(400).json({ error: 'Invalid route' });
         }

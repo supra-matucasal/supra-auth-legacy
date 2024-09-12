@@ -10,7 +10,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createAuthRouterNextApi = void 0;
-//import { getSession } from '../auth-utils-server';
 const handlers_1 = require("../handlers");
 function createAuthRouterNextApi() {
     return function authRouter(req, res) {
@@ -25,13 +24,23 @@ function createAuthRouterNextApi() {
                             return (0, handlers_1.handleLoginNextApi)(req, res);
                         case 'callback':
                             return (0, handlers_1.handleCallbackNextApi)(req, res);
+                        case 'logout':
+                            return (0, handlers_1.handleLogoutNextApi)(req, res);
                         case 'token':
                             return (0, handlers_1.handleTokenNextApi)(req, res);
+                        case 'me':
+                            return (0, handlers_1.handleMeNextApi)(req, res);
+                        case 'session':
+                            return (0, handlers_1.handleSessionNextApi)(req, res);
+                        case 'remove-token':
+                            return (0, handlers_1.handleRemoveCookieNextApi)(req, res);
                         default:
                             return res.status(400).json({ error: 'Invalid route' });
                     }
                 case 'POST':
                     switch (route) {
+                        case 'refresh-token':
+                            return (0, handlers_1.handleRefreshTokenNextApi)(req, res);
                         default:
                             return res.status(400).json({ error: 'Invalid route' });
                     }
