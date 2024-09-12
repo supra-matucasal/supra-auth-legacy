@@ -1,0 +1,11 @@
+export const SESSION_NAME: any = process.env.SESSION_NAME
+export const SUPRA_AUTH_CLIENT_BASE_URL = process.env.SUPRA_AUTH_CLIENT_BASE_URL
+export const REDIRECT_URI = SUPRA_AUTH_CLIENT_BASE_URL + '/api/auth/callback'
+export const SUPRA_AUTH_CLIENT_ID = process.env.SUPRA_AUTH_CLIENT_ID
+export const SUPRA_AUTH_ISSUER_BASE_URL = process.env.SUPRA_AUTH_FRONTEND_URL
+export const SUPRA_AUTH_CLIENT_SECRET = process.env.SUPRA_AUTH_CLIENT_SECRET
+export const LOGOUT_URL = `${SUPRA_AUTH_ISSUER_BASE_URL}/api/auth/logout`
+export const REFRESH_TOKEN_URL = `${SUPRA_AUTH_ISSUER_BASE_URL}/api/auth/refresh-token`
+export const TOKEN_FETCH_URL = `${SUPRA_AUTH_ISSUER_BASE_URL}/api/auth/token`
+export const ME_URL = `${SUPRA_AUTH_ISSUER_BASE_URL}/api/auth/me`
+export const SESSION_COOKIE_MAX_AGE: any = process.env.SESSION_COOKIE_MAX_AGE

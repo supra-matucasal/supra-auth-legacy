@@ -7,7 +7,8 @@
     "dist"
   ],
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./server": "./dist/server.js"
   },
   "scripts": {
     "clean": "rimraf dist",
@@ -18,7 +19,12 @@
     "react": "17.0.2"
   },
   "dependencies": {
-    "rimraf": "^6.0.1"
+    "@types/cookie": "^0.6.0",
+    "next": "12.1.5",
+    "rimraf": "^6.0.1",
+    "cookie": "^0.6.0",
+    "@types/uuid": "^10.0.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/node": "17.0.24",

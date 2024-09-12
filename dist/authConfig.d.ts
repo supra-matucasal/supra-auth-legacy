@@ -1,0 +1,11 @@
+export declare const SESSION_NAME: any;
+export declare const SUPRA_AUTH_CLIENT_BASE_URL: string | undefined;
+export declare const REDIRECT_URI: string;
+export declare const SUPRA_AUTH_CLIENT_ID: string | undefined;
+export declare const SUPRA_AUTH_ISSUER_BASE_URL: string | undefined;
+export declare const SUPRA_AUTH_CLIENT_SECRET: string | undefined;
+export declare const LOGOUT_URL: string;
+export declare const REFRESH_TOKEN_URL: string;
+export declare const TOKEN_FETCH_URL: string;
+export declare const ME_URL: string;
+export declare const SESSION_COOKIE_MAX_AGE: any;

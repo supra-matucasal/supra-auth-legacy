@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SESSION_COOKIE_MAX_AGE = exports.ME_URL = exports.TOKEN_FETCH_URL = exports.REFRESH_TOKEN_URL = exports.LOGOUT_URL = exports.SUPRA_AUTH_CLIENT_SECRET = exports.SUPRA_AUTH_ISSUER_BASE_URL = exports.SUPRA_AUTH_CLIENT_ID = exports.REDIRECT_URI = exports.SUPRA_AUTH_CLIENT_BASE_URL = exports.SESSION_NAME = void 0;
+exports.SESSION_NAME = process.env.SESSION_NAME;
+exports.SUPRA_AUTH_CLIENT_BASE_URL = process.env.SUPRA_AUTH_CLIENT_BASE_URL;
+exports.REDIRECT_URI = exports.SUPRA_AUTH_CLIENT_BASE_URL + '/api/auth/callback';
+exports.SUPRA_AUTH_CLIENT_ID = process.env.SUPRA_AUTH_CLIENT_ID;
+exports.SUPRA_AUTH_ISSUER_BASE_URL = process.env.SUPRA_AUTH_FRONTEND_URL;
+exports.SUPRA_AUTH_CLIENT_SECRET = process.env.SUPRA_AUTH_CLIENT_SECRET;
+exports.LOGOUT_URL = `${exports.SUPRA_AUTH_ISSUER_BASE_URL}/api/auth/logout`;
+exports.REFRESH_TOKEN_URL = `${exports.SUPRA_AUTH_ISSUER_BASE_URL}/api/auth/refresh-token`;
+exports.TOKEN_FETCH_URL = `${exports.SUPRA_AUTH_ISSUER_BASE_URL}/api/auth/token`;
+exports.ME_URL = `${exports.SUPRA_AUTH_ISSUER_BASE_URL}/api/auth/me`;
+exports.SESSION_COOKIE_MAX_AGE = process.env.SESSION_COOKIE_MAX_AGE;
