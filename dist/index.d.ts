@@ -1,2 +1,1 @@
-declare const test: () => any;
-export default test;
+export * from './shared';
