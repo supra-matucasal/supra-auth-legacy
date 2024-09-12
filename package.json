@@ -9,7 +9,9 @@
   "exports": {
     ".": "./dist/index.js",
     "./next12/server": "./dist/next12/server/index.js",
-    "./next12/client": "./dist/next12/client/index.js"
+    "./next12/client": "./dist/next12/client/index.js",
+    "./next14/server": "./dist/next14/server/index.js",
+    "./next14/client": "./dist/next14/client/index.js"
   },
   "scripts": {
     "clean": "rimraf dist",
