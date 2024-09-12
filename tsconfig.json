@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // or ES6 if your environment supports it
+    "module": "CommonJS", // or ESNext if you're using native ES modules
+    "outDir": "./dist",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "include": ["./**/*"],
+  "exclude": ["node_modules", "dist"]
+}
