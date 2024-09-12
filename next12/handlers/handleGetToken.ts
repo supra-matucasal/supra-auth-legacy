@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { SESSION_NAME } from '../authConfig';
+import { SESSION_NAME } from '../../authConfig';
 import { parse } from 'cookie';
 
 export async function handleGetToken(req: NextApiRequest, res: NextApiResponse) {

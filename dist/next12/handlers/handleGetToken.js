@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleGetToken = void 0;
-const authConfig_1 = require("../authConfig");
+const authConfig_1 = require("../../authConfig");
 const cookie_1 = require("cookie");
 function handleGetToken(req, res) {
     return __awaiter(this, void 0, void 0, function* () {

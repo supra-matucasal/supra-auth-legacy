@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleTokenNextApi = void 0;
 const cookie_1 = __importDefault(require("cookie"));
-const authConfig_1 = require("../authConfig");
+const authConfig_1 = require("../../authConfig");
 function handleTokenNextApi(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const { headers } = req;

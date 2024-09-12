@@ -8,19 +8,18 @@
   ],
   "exports": {
     ".": "./dist/index.js",
-    "./server": "./dist/server.js"
+    "./next12": "./dist/next12.js"
   },
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && tsc --project ./tsconfig.json"
   },
   "peerDependencies": {
-    "next": "12.1.5",
-    "react": "17.0.2"
+    "next": "12.1.5 || ^14.0.0",
+    "react": "17.0.2 || ^18"
   },
   "dependencies": {
     "@types/cookie": "^0.6.0",
-    "next": "12.1.5",
     "rimraf": "^6.0.1",
     "cookie": "^0.6.0",
     "@types/uuid": "^10.0.0",
@@ -28,6 +27,7 @@
   },
   "devDependencies": {
     "@types/node": "17.0.24",
-    "typescript": "4.6.3"
+    "typescript": "4.6.3",
+    "next": "12.1.5 || ^14.0.0"
   }
 }
