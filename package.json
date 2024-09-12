@@ -14,10 +14,6 @@
     "clean": "rimraf dist",
     "build": "npm run clean && tsc --project ./tsconfig.json"
   },
-  "peerDependencies": {
-    "next": "12.1.5 || ^14.0.0",
-    "react": "17.0.2 || ^18"
-  },
   "dependencies": {
     "@types/cookie": "^0.6.0",
     "rimraf": "^6.0.1",
