@@ -6,6 +6,8 @@ export function createAuthRouterNextApi() {
   return async function authRouter(req: NextApiRequest, res: NextApiResponse) {
     const pathname = req.url;
     const route = pathname ? pathname.split('/').pop()?.split('?')[0] : undefined;
+    console.log('route in createAuthRouterNextApi', route);
+
     switch (req.method) {
       case 'GET':
         switch (route) {
@@ -14,6 +16,7 @@ export function createAuthRouterNextApi() {
           case 'callback':
             return handleCallbackNextApi(req, res);
           case 'logout':
+            console.log('Trying to logut')
             return handleLogoutNextApi(req, res);
           case 'token':
             return handleTokenNextApi(req, res);
